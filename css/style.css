@@ -558,7 +558,31 @@ nav ul li a:hover {
   transition: all 0.3s;
 
 }
-
+.read-more__button::after {
+  content: "";
+  position: absolute;
+  width: 10px; /* ボックスの横幅を指定する */
+  height: 10px; /* ボックスの高さを指定する */
+  border-top: 1px solid #666666; /* 境界線の上部を実線に指定する*/
+  border-right: 1px solid #666666; /* 境界線の上部を実線に指定する*/
+  transform: rotate(45deg); /* ボックスを回転させる（右向き矢印） */
+  top: 28px;
+  right:  100px;
+  animation: slideBlink 1s linear infinite;
+}
+@keyframes slideBlink {
+  /* アニメーションの内容 */
+  from {
+    /* アニメーション開始時のスタイル */
+    opacity: 0;
+    left: 8px;
+  }
+  to {
+    /* アニメーション終了時のスタイル */
+    opacity: 1;
+    left: 25px;
+  }
+}
 .read-more__button:hover {
   -webkit-box-shadow: -1px -1px 6px rgba(0, 0, 0, 0.2), 3px 3px 5px white,
     0 10px 10px rgba(0, 0, 0, 0.1), inset 0 -4px 5px rgba(0, 0, 0, 0.1),
@@ -1003,13 +1027,13 @@ nav ul li a:hover {
   color: #333;
   padding: 15.5px 12px;
   margin-top: 40px;
-  width: 80%;
+  width: 180px;
   transition: background-color 0.3s;
 }
 .contact .read-more__button::before {
   background: linear-gradient(to right, rgba(203, 122, 157, 0.699), #f4fcfe);
   content: "";
-  height: 100%;
+  /* height: 100%; */
   left: 0;
   position: absolute;
   top: 0;
@@ -1018,7 +1042,7 @@ nav ul li a:hover {
   border-radius: 8px;
 }
 .contact .read-more__button::after {
-  top: 3px;
+  top: 20px;
 }
 .contact.read-more__button span {
   font-family: "Yu Gothic";
