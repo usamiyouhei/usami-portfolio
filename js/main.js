@@ -283,3 +283,9 @@ $(window).resize(function() {
   //リサイズされたときの処理
   PositionCheck()
 });
+
+const loading = document.getElementById('loading');
+
+window.onload = function() {
+  loading.classList.add('loaded');
+}
