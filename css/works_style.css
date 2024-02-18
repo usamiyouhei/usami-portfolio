@@ -515,16 +515,18 @@ nav ul li a:hover {
   width: 100%;
   background-image: url(../img/footer-background.jpg);
   /* padding-bottom: 180px; */
-  /* margin-bottom: 150px; */
 }
 .footer__container {
-  position: relative;
-  z-index: 100;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.footer__items {
 }
 
 .footer ul {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   padding: 70px 0;
   margin: 0;
@@ -536,11 +538,14 @@ nav ul li a:hover {
   font-size: 2rem;
   letter-spacing: 0.1rem;
 }
-
+.footer__wrap {
+  padding-top: 50px;
+  margin-left: 5rem;
+}
 .footer__icon i {
   font-size: 30px;
   padding: 10px;
-  margin: 0 30px;
+  margin: 0 10px;
   color: #333;
   cursor: pointer;
 }

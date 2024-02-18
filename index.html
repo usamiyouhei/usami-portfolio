@@ -47,7 +47,12 @@
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- ファーストビューの背景画像を先に読み込む -->
-    <link rel="preload" as="image" href="./img/kv-img1.jpg" />
+    <link
+      rel="preload"
+      href="http://127.0.0.1:5502/img/kv-img1.jpg"
+      as="image"
+    />
+
     <!-- <link rel="preload" as="image" href="" /> -->
 
     <!-- JavaScript -->
@@ -66,10 +71,16 @@
   </head>
 
   <body>
-    <div id="loading">
+    <!-- <div id="loading">
       Loading...
-    </div>
-
+    </div> -->
+    <!-- <div class="loading">
+      <div class="loading-wrap">
+        <div class="loading-wrap__img">
+          <img src="./img/Youhei USAMI Portfoliologo.svg" alt="" />
+        </div>
+      </div>
+    </div> -->
 
     <!-- header -->
     <header class="header" id="header">
@@ -162,7 +173,7 @@
           <div class="main-img"></div>
           <div class="main-img"></div>
           <div class="main-img"></div>
-          <div class="kv__title-img ">
+          <div class="kv__title-img">
             <img
               class="logo-img fade-in fade-in-up"
               src="./img/Creating the Only One.svg"
@@ -226,14 +237,14 @@
       <!-- service -->
       <section class="service scroll-point" id="service">
         <div class="service__inner inner">
-          <div class="service__title section-title">
-            <span class="section-title__main">Service</span>
-            <h2 class="section-title__sub">事業内容</h2>
-          </div>
           <ul class="service__items">
             <div class="website-service">
+              <div class="service__title section-title">
+                <span class="section-title__main">Service</span>
+                <h2 class="section-title__sub">事業内容</h2>
+              </div>
               <h3 class="service-title__main-second section-title">
-                website service
+                Website Service
               </h3>
               <ul class="service__items--web">
                 <li class="service__item fade-in fade-in-up">
@@ -269,7 +280,9 @@
                       />
                     </div>
                     <p class="service__item-text">
-                      クライアント様のイメージを詳しくヒアリングしてブランドイメージに沿ったデザインを作っていきます。<br class="pc-show" />
+                      クライアント様のイメージを詳しくヒアリングしてブランドイメージに沿ったデザインを作っていきます。<br
+                        class="pc-show"
+                      />
                       ロゴ制作も承ります。
                     </p>
                   </a>
@@ -279,7 +292,7 @@
                     href="./service_html/service_renewal.html"
                     class="service__item--link"
                   >
-                    <h4 class="service__item-title">Webサイトリニューアル</h4>
+                    <h4 class="service__item-title">サイトリニューアル</h4>
                     <div class="service__item-img">
                       <img
                         src="./img/siterenewal.png"
@@ -297,7 +310,7 @@
 
             <div class="creator-service">
               <h3 class="service-title__main-second creator section-title">
-                creator service
+                Creator Service
               </h3>
               <ul class="service__items--creator">
                 <li class="service__item fade-in fade-in-up">
@@ -314,7 +327,7 @@
                       />
                     </div>
                     <p class="service__item-text">
-                      飲食店、パティシエの経験を活かしコンサルタントを行っております。<br>
+                      飲食店、パティシエの経験を活かしコンサルタントを行っております。<br />
                       ケーキ屋、カフェ、デザート屋などお気軽にご相談ください。
                     </p>
                   </a>
@@ -354,9 +367,7 @@
                       />
                     </div>
                     <p class="service__item-text">
-                      写真、動画撮影も承ります。<br
-                        class="pc-show"
-                      />
+                      写真、動画撮影も承ります。<br class="pc-show" />
                       ポートフォリオの写真は<br
                         class="pc-show lg-none"
                       />自分が撮影しました。
@@ -391,6 +402,7 @@
                 <time class="news-item__date" datetime="2023-12-29"
                   >2024.1.19</time
                 >
+                <h4>新ポートフォリオ</h4>
                 <a href="./news.html" class="news-item__title"
                   >新ポートフォリオ完成しました&#33;<br />
                   こちらのサイトも自分で制作しております。<br class="sp-show" />
@@ -409,6 +421,7 @@
                 <time class="news-item__date" datetime="2024-1-2"
                   >2024.1.2</time
                 >
+                <h4>明けましておめでとうございます</h4>
                 <a href="./news.html" class="news-item__title"
                   >本年もよろしく<br class="sp-show" />お願いいたします。<br />
                   今年はクリエイターとして<br
@@ -430,6 +443,7 @@
                 <time class="news-item__date" datetime="2023-12-15"
                   >2023.12.15</time
                 >
+                <h4>クリスマス</h4>
                 <a href="./news.html" class="news-item__title"
                   >クリスマスデザートコーススタート</a
                 >
@@ -464,7 +478,7 @@
         </div>
         <div class="works__inner inner">
           <ul class="works__list js-fadeIn">
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn500ms works-item">
               <a href="./works_html/works_pondesign.html"
                 ><div>
                   <img
@@ -476,7 +490,7 @@
                 <h3>Web制作</h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn1s works-item">
               <a href="./works_html/works_shoes.html"
                 ><div>
                   <img
@@ -488,7 +502,7 @@
                 <h3>Web制作</h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn1500ms works-item">
               <a href="./works_html/works_green.html"
                 ><div>
                   <img
@@ -500,7 +514,7 @@
                 <h3>Web制作</h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn2s works-item">
               <a href="./works_html/works_clothes.html"
                 ><div>
                   <img
@@ -512,7 +526,7 @@
                 <h3>Web制作</h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn2500ms works-item">
               <a href="./works_html/works_camp.html"
                 ><div>
                   <img
@@ -524,7 +538,7 @@
                 <h3>Web制作</h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn3s works-item">
               <a href="./works_html/works_web-design.html"
                 ><div>
                   <img
@@ -536,7 +550,7 @@
                 <h3>Webサイトデザイン</h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn3500ms works-item">
               <a href="./works_html/creator.html"
                 ><div>
                   <img
@@ -551,7 +565,7 @@
                 </h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn4s works-item">
               <a href="./works_html/dessert.html"
                 ><div>
                   <img
@@ -566,7 +580,7 @@
                 </h3></a
               >
             </li>
-            <li class="fade-in fade-in-up works-item">
+            <li class="fadeIn4500ms works-item">
               <a href="./works_html/hobby.html"
                 ><div>
                   <img
@@ -688,7 +702,7 @@
     <!-- footer -->
     <footer class="footer" id="footer">
       <div class="footer__container inner">
-        <nav class="footer__nav ">
+        <nav class="footer__nav">
           <ul class="footer__items">
             <li class="footer__item"><a href="#about">About</a></li>
             <li class="footer__item"><a href="#service">Service</a></li>
@@ -698,33 +712,33 @@
           </ul>
         </nav>
         <div class="footer__wrap">
-        <div class="footer__icon">
-          <a href="https://twitter.com/" target="_blank"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><i class="fa-brands fa-square-instagram"></i
-          ></a>
-          <a href="https://www.facebook.com/"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://github.com/usamiyouhei"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://www.youtube.com/"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-        </div>
+          <div class="footer__icon">
+            <a href="https://twitter.com/" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://github.com/usamiyouhei"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://www.youtube.com/"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
 
-        <div class="footer__info inner">
-          <h4>Information</h4>
-          <p>
-            〒460-0067<br />
-            愛知県名古屋市千種区池下2-2-8<br />
-            正木ビル1-A<br />
-            052-753-9669
-          </p>
-        </div>
+          <div class="footer__info inner">
+            <h4>Information</h4>
+            <p>
+              〒460-0067<br />
+              愛知県名古屋市千種区池下2-2-8<br />
+              正木ビル1-A<br />
+              052-753-9669
+            </p>
+          </div>
         </div>
       </div>
       <div class="footer__copy-right">

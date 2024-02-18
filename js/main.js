@@ -5,7 +5,6 @@ hamburgerMenu.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-
 // スムーススクロール
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener("click", function (event) {
@@ -25,8 +24,8 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   });
 });
 
-const elementToToggle = document.getElementById('elementToToggle');
-const contact = document.getElementById('contact');
+const elementToToggle = document.getElementById("elementToToggle");
+const contact = document.getElementById("contact");
 
 // // スクロール時のイベントリスナーを追加
 // window.addEventListener('scroll', () => {
@@ -45,93 +44,88 @@ const contact = document.getElementById('contact');
 // });
 // フェードイン
 // スクロールイベント
-window.addEventListener('scroll', function(){
+window.addEventListener("scroll", function () {
   //すべての.fadeを取得
-  const fade = document.querySelectorAll('.fade');
+  const fade = document.querySelectorAll(".fade");
 
-  for(let i = 0; i < fade.length; i++){
+  for (let i = 0; i < fade.length; i++) {
     //fadeの高さ取得
     var targetTop = fade[i].offsetTop;
 
     //画面のスクロール量 + 300px > .fadeのoffsetの高さ
-    if(window.scrollY + 300 > targetTop){
-      fade[i].classList.add('show');
+    if (window.scrollY + 300 > targetTop) {
+      fade[i].classList.add("show");
     }
   }
 });
 let swipeOption = {
   loop: true,
-  effect: 'fade',
+  effect: "fade",
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
   speed: 2000,
-}
-// new Swiper('.swiper-container', swipeOption); 
+};
+// new Swiper('.swiper-container', swipeOption);
 
-let fadeInTarget = document.querySelectorAll('.fade-in');
-window.addEventListener('scroll', () => {
-  for (let i = 0; i < fadeInTarget.length; i++){
+let fadeInTarget = document.querySelectorAll(".fade-in");
+window.addEventListener("scroll", () => {
+  for (let i = 0; i < fadeInTarget.length; i++) {
     const rect = fadeInTarget[i].getBoundingClientRect().top;
     const scroll = window.pageYOffset || document.documentElement.scrollTop;
     const offset = rect + scroll;
     const windowHeight = window.innerHeight; // 現在のブラウザの高さ
     if (scroll > offset - windowHeight + 150) {
-      fadeInTarget[i].classList.add('scroll-in');
+      fadeInTarget[i].classList.add("scroll-in");
     }
   }
 });
 
-
 //モーダル
 //モーダルオープン .list div を格納
-const modalOpen = document.querySelectorAll('.list div');
+const modalOpen = document.querySelectorAll(".list div");
 
 //モーダルをforEachで取得し、コールバック関数の引数をbuttonに設定
-modalOpen.forEach(function(button){
-
+modalOpen.forEach(function (button) {
   //buttonをクリックしたとき
-  button.onclick = function(){
-
+  button.onclick = function () {
     //data-modalの値を取得
-    var modal = button.getAttribute('data-modal');
+    var modal = button.getAttribute("data-modal");
 
     //data-modalの値と同じIDのモーダルを表示
     document.getElementById(modal).style.display = "block";
-  }
+  };
 });
 
 // モーダルクローズ
 //.closeを変数に格納
-const modalClose = document.querySelectorAll('.close');
+const modalClose = document.querySelectorAll(".close");
 
 //.closeをforEachで取得し、コールバック関数の引数をbuttonに設定
-modalClose.forEach(function(button){
-
+modalClose.forEach(function (button) {
   //closeをクリックしたとき
-  button.onclick = function(){
-
+  button.onclick = function () {
     //祖先の要素.modalを取得
-    var modal = button.closest('.modal');
+    var modal = button.closest(".modal");
 
     // モーダルを非表示
     modal.style.display = "none";
-  }
+  };
 });
 // フェードイン
 //スクロールイベント
-window.addEventListener('scroll', function(){
+window.addEventListener("scroll", function () {
   //すべての.fadeを取得
-  const fade = document.querySelectorAll('.fade');
+  const fade = document.querySelectorAll(".fade");
 
-  for(let i = 0; i < fade.length; i++){
+  for (let i = 0; i < fade.length; i++) {
     //fadeの高さ取得
     var targetTop = fade[i].offsetTop;
 
     //画面のスクロール量 + 300px > .fadeのoffsetの高さ
-    if(window.scrollY + 300 > targetTop){
-      fade[i].classList.add('show');
+    if (window.scrollY + 300 > targetTop) {
+      fade[i].classList.add("show");
     }
   }
 });
@@ -161,40 +155,37 @@ var swiper = new Swiper(".mySwiper", {
 //       cssEase: 'linear',
 //       slidesToShow: 3,
 //       swipe: false,
-//       pauseOnFocus: false, 
+//       pauseOnFocus: false,
 //       pauseOnHover: false,
 //       arrows: false,
 //   });
 // });
 
-
-
-
 $(function () {
   $(".js-slick01").slick({
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: 5000,
-      cssEase: 'linear',
-      slidesToShow: 3,
-      swipe: false,
-      pauseOnFocus: true, 
-      pauseOnHover:true,
-      arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    cssEase: "linear",
+    slidesToShow: 3,
+    swipe: false,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    arrows: false,
   });
 });
 $(function () {
   $(".js-slick02").slick({
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: 5000,
-      cssEase: 'linear',
-      slidesToShow: 3,
-      swipe: false,
-      pauseOnFocus: false, 
-      pauseOnHover: false,
-      arrows: false,
-      rtl: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    cssEase: "linear",
+    slidesToShow: 3,
+    swipe: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    arrows: false,
+    rtl: true,
   });
 });
 // $(function () {
@@ -205,7 +196,7 @@ $(function () {
 //       cssEase: 'linear',
 //       slidesToShow: 3,
 //       swipe: false,
-//       pauseOnFocus: false, 
+//       pauseOnFocus: false,
 //       pauseOnHover: false,
 //       arrows: false,
 //   });
@@ -221,71 +212,104 @@ function stoploading() {
   $(".js-loader-bg").fadeOut(600);
 }
 
-
-
-
-
 //基準点の準備
 var elemTop = [];
 
 //現在地を取得するための設定を関数でまとめる
-function PositionCheck(){
-    //headerの高さを取得
+function PositionCheck() {
+  //headerの高さを取得
   var headerH = $("#header").outerHeight(true);
-    //.scroll-pointというクラス名がついたエリアの位置を取得する設定
-  $(".scroll-point").each(function(i) {//.scroll-pointクラスがついたエリアからトップまでの距離を計算して設定
-    elemTop[i] =Math.round(parseInt($(this).offset().top-headerH));//追従するheader分の高さ（70px）を引き小数点を四捨五入
+  //.scroll-pointというクラス名がついたエリアの位置を取得する設定
+  $(".scroll-point").each(function (i) {
+    //.scroll-pointクラスがついたエリアからトップまでの距離を計算して設定
+    elemTop[i] = Math.round(parseInt($(this).offset().top - headerH)); //追従するheader分の高さ（70px）を引き小数点を四捨五入
   });
 }
 
 //ナビゲーションに現在地のクラスをつけるための設定
-function ScrollAnime() {//スクロールした際のナビゲーションの関数にまとめる
+function ScrollAnime() {
+  //スクロールした際のナビゲーションの関数にまとめる
   var scroll = Math.round($(window).scrollTop());
-  var NavElem = $("#header-nav li");//ナビゲーションのliの何番目かを定義するための準備
-  $("#header-nav li").removeClass('current');//全てのナビゲーションの現在地クラスを除去
-  if(scroll >= 0 && scroll < elemTop[1]) {//スクロール値が0以上 .scroll-point 1つめ（area-1）の高さ未満
-      $(NavElem[0]).addClass('current');//1つめのliに現在地クラスを付与
-    }
-  else if(scroll >= elemTop[1] && scroll < elemTop[2]) {//.scroll-point 1つめ（area-1）以上.scroll-point 2つめ（area-2）未満
-     $(NavElem[1]).addClass('current');//2つめのliに現在地クラスを付与
-    } 
-    else if(scroll >= elemTop[2] && scroll < elemTop[3]) {//.scroll-point 2つめ（area-2）以上.scroll-point 3つめ（area-3）未満
-     $(NavElem[2]).addClass('current');//3つめのliに現在地クラスを付与
-    } 
-    else if(scroll >= elemTop[3]) {// .scroll-point 3つめ（area-3）以上
-      $(NavElem[3]).addClass('current');//4つめのliに現在地クラスを付与
-    } 
+  var NavElem = $("#header-nav li"); //ナビゲーションのliの何番目かを定義するための準備
+  $("#header-nav li").removeClass("current"); //全てのナビゲーションの現在地クラスを除去
+  if (scroll >= 0 && scroll < elemTop[1]) {
+    //スクロール値が0以上 .scroll-point 1つめ（area-1）の高さ未満
+    $(NavElem[0]).addClass("current"); //1つめのliに現在地クラスを付与
+  } else if (scroll >= elemTop[1] && scroll < elemTop[2]) {
+    //.scroll-point 1つめ（area-1）以上.scroll-point 2つめ（area-2）未満
+    $(NavElem[1]).addClass("current"); //2つめのliに現在地クラスを付与
+  } else if (scroll >= elemTop[2] && scroll < elemTop[3]) {
+    //.scroll-point 2つめ（area-2）以上.scroll-point 3つめ（area-3）未満
+    $(NavElem[2]).addClass("current"); //3つめのliに現在地クラスを付与
+  } else if (scroll >= elemTop[3]) {
+    // .scroll-point 3つめ（area-3）以上
+    $(NavElem[3]).addClass("current"); //4つめのliに現在地クラスを付与
+  }
 }
 
 //ナビゲーションをクリックした際のスムーススクロール
-$('#header-nav a').click(function () {
-  var elmHash = $(this).attr('href'); //hrefの内容を取得
-  var headerH = $("#header").outerHeight(true);//追従するheader分の高さ（70px）を引く
-  var pos = Math.round($(elmHash).offset().top-headerH);  //headerの高さを引き小数点を四捨五入
-  $('body,html').animate({scrollTop: pos}, 500);//取得した位置にスクロール※数値が大きいほどゆっくりスクロール
-  return false;//リンクの無効化
+$("#header-nav a").click(function () {
+  var elmHash = $(this).attr("href"); //hrefの内容を取得
+  var headerH = $("#header").outerHeight(true); //追従するheader分の高さ（70px）を引く
+  var pos = Math.round($(elmHash).offset().top - headerH); //headerの高さを引き小数点を四捨五入
+  $("body,html").animate({ scrollTop: pos }, 500); //取得した位置にスクロール※数値が大きいほどゆっくりスクロール
+  return false; //リンクの無効化
 });
-
 
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-  PositionCheck();/* 現在地を取得する関数を呼ぶ*/
-  ScrollAnime();/* ナビゲーションに現在地のクラスをつけるための関数を呼ぶ*/
+  PositionCheck(); /* 現在地を取得する関数を呼ぶ*/
+  ScrollAnime(); /* ナビゲーションに現在地のクラスをつけるための関数を呼ぶ*/
 });
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-  PositionCheck();/* 現在地を取得する関数を呼ぶ*/
-  ScrollAnime();/* ナビゲーションに現在地のクラスをつけるための関数を呼ぶ*/
+$(window).on("load", function () {
+  PositionCheck(); /* 現在地を取得する関数を呼ぶ*/
+  ScrollAnime(); /* ナビゲーションに現在地のクラスをつけるための関数を呼ぶ*/
 });
 
-$(window).resize(function() {
+$(window).resize(function () {
   //リサイズされたときの処理
-  PositionCheck()
+  PositionCheck();
 });
 
-const loading = document.getElementById('loading');
+// const loading = document.getElementById('loading');
 
-window.onload = function() {
-  loading.classList.add('loaded');
-}
+// window.onload = function() {
+//   loading.classList.add('loaded');
+// }
+
+$(function () {
+  // ウィンドウをスクロールしたら…
+  $(window).scroll(function () {
+    // ウィンドウの高さを取得
+    const wHeight = $(window).height();
+    // スクロールした量を取得
+    const wScroll = $(window).scrollTop();
+    // それぞれのblockクラスに対して…
+    $(".works-item").each(function () {
+      // それぞれのblockクラスのウィンドウからの高さを取得
+      const bPosition = $(this).offset().top;
+      // スクロールした量が要素の高さを上回ったら
+      // その数値にウィンドウの高さを引き、最後に200pxを足す
+      if (wScroll > bPosition - wHeight + 200) {
+        $(".fadeIn1s").addClass("fadeInAnime1s");
+        $(".fadeIn1500ms").addClass("fadeInAnime1500ms");
+        $(".fadeIn500ms").addClass("fadeInAnime500ms");
+        $(".fadeIn2s").addClass("fadeInAnime2s");
+        $(".fadeIn2500ms").addClass("fadeInAnime2500ms");
+        $(".fadeIn3s").addClass("fadeInAnime3s");
+        $(".fadeIn3500ms").addClass("fadeInAnime3500ms");
+        $(".fadeIn4s").addClass("fadeInAnime4s");
+        $(".fadeIn4500ms").addClass("fadeInAnime4500ms");
+      }
+    });
+  });
+});
+
+// const loading = document.querySelector(".loading");
+// window.addEventListener("load", () => {
+//   setTimeout(function () {
+//     loading.classList.add("hide");
+//   }, 2000);
+// });
